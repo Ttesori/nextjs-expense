@@ -10,6 +10,8 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
   title: 'ExpenseTracker',
@@ -26,7 +28,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${roboto.className}`}>
           <Header />
-          <main className="container">{children}</main>{' '}
+          <main className="container">{children}</main> <ToastContainer />
         </body>
       </html>
     </ClerkProvider>
